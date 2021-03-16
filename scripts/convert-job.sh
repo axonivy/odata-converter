@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# sudo apt install incron
-
 file=$1/$2
-
 
 #m:DataServiceVersion="2.0"
 

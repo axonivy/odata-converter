@@ -12,17 +12,11 @@
           <hr />
           
           <p>
-          	Conversion is done. You can download the your <a href="{{ downloadUrl }}">Open API specification</a>.
+          	Conversion is done. You can download the your <a href="{{ downloadUrl }}" target="_blank">Open API specification</a>.
           </p>
 
-          <code>
-            {{ consoleLog }}
-          </code>
-
-          <script>
-			document.addEventListener("DOMContentLoaded", function(){
-				window.location.href = '{{ downloadUrl }}';
-			});
+          <code><pre>{{ consoleLog }}
+</pre></code>
           </script>
         </div>
   </div>
