@@ -7,29 +7,29 @@
 
 <section id="banner">
   <div class="inner">
-	<div class="twelve column" style="margin-top: 5%">
-          <h1>OData to OpenAPI converter</h1>
+	<div class="twelve column" style="margin-top: 5%;text-align:center;">
+          <h1 style="text-align:center;">OData to OpenAPI converter</h1>
           <hr />
           
           <p>
-          	You can convert your ODate specifications to OpenAPI
-          	directly here. If you don't like to upload your data
-          	or you want to automate this process you can use
-          	our docker containers:
-          	
-          	<ul>
-          		<li>Version 2: https://github.com/axonivy/build-container/tree/master/odata-converter/2</li>
-          		<li>Version 3 and 4: https://github.com/axonivy/build-container/tree/master/odata-converter/4</li>
-          	</ul>
+          	Here you convert your OData specification to OpenAPI.            
           </p>
           
           <form method="post" enctype="multipart/form-data">
-            OData specification: 
             <input type="file" name="feilchen" />
             
             <br />
             <input type="submit" name="convert" value="Convert" />
           </form>
+
+
+          <hr />
+          <p style="font-size:12px;">
+          If you don't like to upload your data or you want to automate
+            this process you can use our docker containers <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">Version 2</a>
+            or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">Version 3 and 4</a>
+          	
+          </p>
         </div>
   </div>
 </section>
