@@ -28,5 +28,12 @@ Install docker and docker-compose.
 3)
 
 sudo apt-get install incron
-
 echo "ubuntu" | sudo tee -a /etc/incron.allow
+incrontab -e
+/opt/data/input IN_CREATE /opt/odata-converter/scripts/convert-job.sh $@ $#
+mkdir /opt/data/output
+
+
+
+/opt/data/input IN_CREATE       echo "$@ $# $% $&"
+#/opt/data/input        IN_CREATE       /opt/odata-converter/scripts/convert-job.sh $@ $#

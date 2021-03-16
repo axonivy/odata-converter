@@ -7,12 +7,21 @@
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
-  <link rel="icon" href="/images/favicon.png">
+  <style type ="text/css" >
+    .footer{ 
+      position: fixed;     
+      text-align: center;    
+      bottom: 10px; 
+      width: 100%;
+    }
+  </style>
 </head>
 
   <body>
     <div class="container">
 	  {% block global %}{% endblock %}  	
     </div>
+
+    <div class="footer">Powered by 🌿 <a href="https://developer.axonivy.com/team">ivyTeam</a></div>
   </body>
 </html>
