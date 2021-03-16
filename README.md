@@ -7,3 +7,26 @@
   /odata2-output
   /odata4-input
   /odata4-output
+
+
+## Install
+
+
+1)
+Install docker and docker-compose.
+
+
+2)
+  git clone https://github.com/axonivy/odata-converter
+
+  docker-compose up -d
+  docker-compose exec web composer install
+
+  file permission for data directory
+
+
+3)
+
+sudo apt-get install incron
+
+echo "ubuntu" | sudo tee -a /etc/incron.allow

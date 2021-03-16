@@ -24,12 +24,18 @@ class PickupAction
 
         $oldPlace = Config::INPUT_DIR . "/$id.xml";
         $newPlace = Config::OUTPUT_DIR . "/$id.json";
+        $logFile = Config::OUTPUT_DIR . "/$id.xml.log";
+
+        $logContent = '';
+        if (file_exists($logFile)) {
+          $logContent = file_get_contents($logFile);
+        }
 
         if (file_exists($newPlace)) {
             $url = "/data/output/$id.json";
-            return $this->view->render($response, 'pickup/pickup.twig', ['downloadUrl' => $url]);
-        } else if (file_exists($oldPlace)) {
-            return $this->view->render($response, 'pickup/wait.twig');
+            return $this->view->render($response, 'pickup/pickup.twig', ['downloadUrl' => $url, 'consoleLog' => $logContent]);
+        } else if (file_exists($oldPlace)) {            
+            return $this->view->render($response, 'pickup/wait.twig', ['consoleLog' => $logContent]);
         } else {
             throw new HttpNotFoundException($request);
         }
