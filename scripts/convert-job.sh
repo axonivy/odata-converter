@@ -2,6 +2,14 @@
 
 file=$1/$2
 
+filename=$(basename -- "$file")
+extension="${filename##*.}"
+
+# can only convert xml (attention do never process *.tmp files)
+if [ "$extension" != "xml" ]; then
+  exit
+fi
+
 #m:DataServiceVersion="2.0"
 
 log=/opt/data/output/$2.log
