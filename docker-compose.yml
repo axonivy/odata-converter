@@ -2,6 +2,7 @@ version: '3.7'
 services:
   web:        
     build: ./docker/apache
+    restart: unless-stopped
     user: "1000"
     volumes:
       - ./:/var/www/html
