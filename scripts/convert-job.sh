@@ -14,4 +14,12 @@ if grep -q DataServiceVersion= "$file"; then
   nameNoExtension=$(echo "$name" | cut -f 1 -d '.')
 
   docker run -u 1000 -v /opt/data:/tmp/work axonivy/build-container:odata-converter-2 -p /tmp/work/input/$name -t /tmp/work/output/$nameNoExtension.json &>> $log
+
+else
+  echo OData version 3/4 detected $2 >> $log
+
+  name=$(basename $file)
+  nameNoExtension=$(echo "$name" | cut -f 1 -d '.')
+
+  docker run -u 1000 -v /opt/data:/tmp/work axonivy/build-container:odata-converter-4 -p /tmp/work/input/$name -t /tmp/work/output/$nameNoExtension.json &>> $log
 fi
