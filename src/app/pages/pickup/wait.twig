@@ -1,0 +1,25 @@
+{% extends "_parts/base.twig" %}
+
+{% block title %}Home{{ parent() }}{% endblock %}
+
+{% block content %}
+
+
+<section id="banner">
+  <div class="inner">
+	<div class="twelve column" style="margin-top: 5%;text-align:center;">
+          <h1>OData to OpenAPI converter</h1>
+          <hr />
+          
+          <p style="text-align:center;font-size:18px;">
+          	We are converting your OData specification to OpenAPI. Please wait ...
+          </p>
+
+          <p style="text-align:center;font-size:10px;">
+          	This page will be refreshed all 3 seconds if not then <a href="">refresh it</a>.
+          	<meta http-equiv="refresh" content="3">
+          </p>
+        </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "_parts/base.twig" %}
+
+{% block title %}Home{{ parent() }}{% endblock %}
+
+{% block content %}
+
+
+<section id="banner">
+  <div class="inner">
+	<div class="twelve column" style="margin-top: 5%">
+          <h1>OData to OpenAPI converter</h1>
+          <hr />
+          
+          <p>
+          	Conversion is done. You can download the your <a href="{{ downloadUrl }}">Open API specification</a>.
+          </p>
+
+          <script>
+			document.addEventListener("DOMContentLoaded", function(){
+				window.location.href = '{{ downloadUrl }}';
+			});
+          </script>
+        </div>
+  </div>
+</section>
+
+{% endblock %}

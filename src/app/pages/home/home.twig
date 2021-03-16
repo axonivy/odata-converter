@@ -1,0 +1,37 @@
+{% extends "_parts/base.twig" %}
+
+{% block title %}Home{{ parent() }}{% endblock %}
+
+{% block content %}
+
+
+<section id="banner">
+  <div class="inner">
+	<div class="twelve column" style="margin-top: 5%">
+          <h1>OData to OpenAPI converter</h1>
+          <hr />
+          
+          <p>
+          	You can convert your ODate specifications to OpenAPI
+          	directly here. If you don't like to upload your data
+          	or you want to automate this process you can use
+          	our docker containers:
+          	
+          	<ul>
+          		<li>Version 2: https://github.com/axonivy/build-container/tree/master/odata-converter/2</li>
+          		<li>Version 3 and 4: https://github.com/axonivy/build-container/tree/master/odata-converter/4</li>
+          	</ul>
+          </p>
+          
+          <form method="post" enctype="multipart/form-data">
+            OData specification: 
+            <input type="file" name="feilchen" />
+            
+            <br />
+            <input type="submit" name="convert" value="Convert" />
+          </form>
+        </div>
+  </div>
+</section>
+
+{% endblock %}
