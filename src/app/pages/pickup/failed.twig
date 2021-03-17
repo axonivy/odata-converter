@@ -1,0 +1,25 @@
+{% extends "_parts/base.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block content %}
+
+
+<section id="banner">
+  <div class="inner">
+	  <div class="twelve column" style="margin-top: 5%;">
+      <h1 style="text-align:center;">OData to OpenAPI converter</h1>
+      <hr />
+          
+      <p style="text-align:center;">Conversion has failed.</p>
+
+      <div style="text-align:center;">
+        <img src="/images/failed.jpg" width="210px" height="210px" />
+      </div>
+
+      <pre><code>{{ consoleLog }}</code></pre>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -17,7 +17,8 @@ directory watcher.
 
 3) start docker compose
 
-        git clone https://github.com/axonivy/odata-converter
+        git clone https://github.com/axonivy/odata-converter /opt/odata-converter
+        cd /opt/odata-converter
         docker-compose up -d
         docker-compose exec web composer install
 

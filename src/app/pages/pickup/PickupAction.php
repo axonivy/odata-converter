@@ -34,6 +34,8 @@ class PickupAction
         if (file_exists($newPlace)) {
             $url = "/data/output/$id.json";
             return $this->view->render($response, 'pickup/pickup.twig', ['downloadUrl' => $url, 'consoleLog' => $logContent]);
+        } else if (str_contains($logContent, 'SyntaxError')) {
+            return $this->view->render($response, 'pickup/failed.twig', ['consoleLog' => $logContent]);
         } else if (file_exists($oldPlace)) {            
             return $this->view->render($response, 'pickup/wait.twig', ['consoleLog' => $logContent]);
         } else {
