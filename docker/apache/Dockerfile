@@ -10,11 +10,9 @@ RUN apt-get update && \
 
 # install php composer
 ADD install-composer.sh ./install-composer.sh
-RUN chmod ugo+x ./install-composer.sh
-RUN ./install-composer.sh
+RUN chmod ugo+x ./install-composer.sh && \
+    ./install-composer.sh
 
-# user for jenkins pipeline
-RUN addgroup --gid 1000 build && adduser --uid 1000 --gid 1000 --disabled-password --gecos "" build
-
-RUN mkdir -p /var/www/html/src/web/data
-RUN chown www-data:www-data /var/www/html/src/web/data
+# create data directory
+RUN mkdir -p /var/www/html/src/web/data &&  \
+    chown 1000:1000 /var/www/html/src/web/data
