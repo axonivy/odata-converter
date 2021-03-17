@@ -20,8 +20,8 @@ class HomeAction
     public function __invoke(Request $request, Response $response, $args)
     {
         $uploadedFiles = $request->getUploadedFiles();
-        if (isset($uploadedFiles['feilchen'])) {
-            $uploadedFile = $uploadedFiles['feilchen'];
+        if (isset($uploadedFiles['specfile'])) {
+            $uploadedFile = $uploadedFiles['specfile'];
             if ($uploadedFile->getError() === UPLOAD_ERR_OK) {
                 $id = self::moveUploadedFile($uploadedFile);
                 $location = "/pickup/$id";
@@ -29,7 +29,7 @@ class HomeAction
             }
         }
         
-        return $this->view->render($response, 'home/home.twig');
+        return $this->view->render($response, 'home/home.twig', ['convertedNumber' => self::converted()]);
     }
 
     private static function moveUploadedFile(UploadedFile $uploadedFile)
@@ -41,5 +41,11 @@ class HomeAction
         $id = uniqid();
         $uploadedFile->moveTo("$path/" . $id . '.xml');
         return $id;
+    }
+
+    private static function converted(): int
+    {
+        $files = glob(Config::INPUT_DIR . "/*.json");
+        return count($files);
     }
 }

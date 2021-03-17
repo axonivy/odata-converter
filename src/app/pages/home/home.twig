@@ -16,19 +16,24 @@
           </p>
           
           <form method="post" enctype="multipart/form-data">
-            <input type="file" name="feilchen" />
+            <input type="file" name="specfile" />
             
             <br />
-            <input type="submit" name="convert" value="Convert" />
+            <input type="submit" name="convert" value="🔄 Convert" />
           </form>
 
+          <p>
+            Successfully converted <span style="font-weight:bold;font-size:22px;">{{ convertedNumber }}</span> OData specifications 👍.
+          </p>
 
           <hr />
-          <p style="font-size:12px;">
-            If you don't like to upload your data or you want to automate the conversion within a pipeline
-            you can use our docker containers <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
-            or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a> 
+          <p style="font-size:14px;">
+            Use our docker containers 🐋 <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
+            or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a>  for offline conversion
+            or automating.
           </p>
+
+         
         </div>
   </div>
 </section>
