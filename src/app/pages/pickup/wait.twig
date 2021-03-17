@@ -5,27 +5,19 @@
 {% block content %}
 
 
-<section id="banner">
-  <div class="inner">
-	<div class="twelve column" style="margin-top: 5%;">
-          <h1 style="text-align:center;">OData to OpenAPI converter</h1>
-          <hr />
-          
-          <p style="font-size:18px;text-align:center;">
-          	We are converting your OData specification to OpenAPI. Please wait ...
-          </p>
+<p style="font-size:18px;text-align:center;">
+  We are converting your OData specification to OpenAPI. Please wait ⏳ ...
+</p>
 
-          <div style="text-align:center;">
-            <img src="/images/loader.gif" width="210px" height="210px" />
-          </div>
+<div style="text-align:center;">
+  <img src="/images/loader.gif" width="210px" height="210px" />
+</div>
 
-          <p style="font-size:10px;text-align:center;">
-          	This page will be refreshed all 3 seconds if not then <a href="">refresh it</a>.
-          	<meta http-equiv="refresh" content="3">
-          </p>
+ <p style="font-size:10px;text-align:center;">
+  	This page will be refreshed all 3 seconds if not then <a href="">refresh it</a>.
+   	<meta http-equiv="refresh" content="3">
+</p>
 
-           <pre><code>{{ consoleLog }}</code></pre>
-        </div>
-  </div>
-</section>
+<pre><code>{{ consoleLog }}</code></pre>
+
 {% endblock %}

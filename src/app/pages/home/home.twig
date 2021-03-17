@@ -4,38 +4,24 @@
 
 {% block content %}
 
-
-<section id="banner">
-  <div class="inner">
-	<div class="twelve column" style="margin-top: 5%;text-align:center;">
-          <h1 style="text-align:center;">OData to OpenAPI converter</h1>
-          <hr />
-          
-          <p>
-          	Convert your OData specification to OpenAPI.            
-          </p>
-          
-          <form method="post" enctype="multipart/form-data">
-            <input type="file" name="specfile" />
+<div style="text-align:center;">
+  <p>Convert your OData specification to OpenAPI.</p>
             
-            <br />
-            <input type="submit" name="convert" value="🔄 Convert" />
-          </form>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="specfile" />
+            
+    <br />
+    <input type="submit" name="convert" value="🔄 Convert" />
+  </form>
 
-          <p>
-            Successfully converted <span style="font-weight:bold;font-size:22px;">{{ convertedNumber }}</span> OData specifications 👍.
-          </p>
+  <p>Successfully converted <span style="font-weight:bold;font-size:22px;">{{ convertedNumber }}</span> OData specifications 👍.</p>
 
-          <hr />
-          <p style="font-size:14px;">
-            Use our docker containers 🐋 <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
-            or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a>  for offline conversion
-            or automating.
-          </p>
-
-         
-        </div>
-  </div>
-</section>
+  <hr />
+  <p style="font-size:14px;">
+    Use our docker containers 🐋 <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
+    or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a>  for offline conversion
+    or automating.
+  </p>
+</div>
 
 {% endblock %}
