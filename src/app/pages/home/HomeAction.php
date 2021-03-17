@@ -45,7 +45,7 @@ class HomeAction
 
     private static function converted(): int
     {
-        $files = glob(Config::INPUT_DIR . "/*.json");
+        $files = glob(Config::OUTPUT_DIR . "/*.json");
         return count($files);
     }
 }
