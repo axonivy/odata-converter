@@ -12,8 +12,9 @@
     .footer{ 
       position: fixed;     
       text-align: center;    
-      bottom: 10px; 
+      bottom: 15px; 
       width: 100%;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -25,7 +26,7 @@
   <div class="inner">
 	  <div class="twelve column" style="margin-top: 5%;">    
         <a style="text-decoration:none;color:black;" href="/"><h1 style="text-align:center;">OData to OpenAPI converter</h1></a>
-          <hr />
+          <br />
 
       	  {% block global %}{% endblock %}  	
 
@@ -34,6 +35,17 @@
       </section>
     </div>
 
-    <div class="footer">Powered by 🌿 <a href="https://developer.axonivy.com/team">ivyTeam</a></div>
+    <div class="footer">
+      
+      <hr />
+      Powered by 🌿 <a href="https://developer.axonivy.com/team">ivyTeam</a>
+      <br /> <br />
+
+      <p style="font-size:14px;">
+      Use our docker containers 🐋 <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
+      or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a>  for offline conversion
+      or automating.
+    </p>
+    </div>
   </body>
 </html>

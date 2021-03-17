@@ -5,8 +5,8 @@
 {% block content %}
 
 <div style="text-align:center;">
-  <p>Convert your OData specification to OpenAPI.</p>
-            
+  <p style="font-size:18px;">Convert your OData specification to OpenAPI</p>
+          <br />   
   <form method="post" enctype="multipart/form-data">
     <input type="file" name="specfile" />
             
@@ -14,14 +14,12 @@
     <input type="submit" name="convert" value="🔄 Convert" />
   </form>
 
-  <p>Successfully converted <span style="font-weight:bold;font-size:22px;">{{ convertedNumber }}</span> OData specifications 👍.</p>
+<br />
+  <p style="font-size:18px;">Successfully converted <span style="font-weight:bold;font-size:24px;">{{ convertedNumber }}</span> OData specifications 👍</p>
 
-  <hr />
-  <p style="font-size:14px;">
-    Use our docker containers 🐋 <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/2">OData Version 2</a>
-    or <a href="https://github.com/axonivy/build-container/tree/master/odata-converter/4">OData Version 3 and 4</a>  for offline conversion
-    or automating.
-  </p>
+   <br />
+   <br />
+  
 </div>
 
 {% endblock %}
