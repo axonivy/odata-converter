@@ -6,20 +6,26 @@
 
 <div style="text-align:center;">
   <p style="font-size:18px;">Convert your OData specification to OpenAPI</p>
-          <br />   
+  
+  <br /><br />
+  
   <form method="post" enctype="multipart/form-data">
     <input type="file" name="specfile" />
-            
-    <br />
-    <input type="submit" name="convert" value="🔄 Convert" />
+    <br /><br />
+    <input type="submit" class="button-primary" style="background-color:#007095;border: #007095;" name="convert" value="Convert" />
   </form>
 
-<br />
-  <p style="font-size:18px;">Successfully converted <span style="font-weight:bold;font-size:24px;">{{ convertedNumber }}</span> OData specifications 👍</p>
+  <br /><br /><br /><br />
 
-   <br />
-   <br />
-  
+  <div class="row">
+    <div class="three columns">&ensp;</div>
+    <div class="six columns">
+      <p style="font-size:18px;border:1px solid #ddd;border-radius: 25px;padding:15px;">
+        Successfully converted <span style="font-weight:bold;font-size:24px;">{{ convertedNumber }}</span> OData specifications 👍
+      </p>  
+    </div>
+    <div class="three columns">&ensp;</div>
+  </div>
 </div>
 
 {% endblock %}
